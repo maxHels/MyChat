@@ -27,7 +27,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите сообщение"
+            android:hint="@string/message_hint"
             android:id="@+id/input"
             />
     </android.support.design.widget.TextInputLayout>

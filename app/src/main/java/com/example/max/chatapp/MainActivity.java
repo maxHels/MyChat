@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
 
             Toast.makeText(this,
-                    "Привет " + FirebaseAuth.getInstance()
+                    R.string.greeting + FirebaseAuth.getInstance()
                             .getCurrentUser()
                             .getDisplayName(),
                     Toast.LENGTH_SHORT)
@@ -102,13 +102,13 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == SIGN_IN_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
                 Toast.makeText(this,
-                        "Успешный вход!",
+                        R.string.login_success,
                         Toast.LENGTH_LONG)
                         .show();
                 displayChatMessages();
             } else {
                 Toast.makeText(this,
-                        "Не удалось войти",
+                        R.string.login_unsuccefull,
                         Toast.LENGTH_LONG)
                         .show();
 
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(MainActivity.this,
-                                    "Вы вышли.",
+                                    R.string.logout,
                                     Toast.LENGTH_LONG)
                                     .show();
 
